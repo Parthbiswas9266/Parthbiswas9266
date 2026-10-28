@@ -31,20 +31,28 @@ def api_get(path):
 def get_owned_public_repos():
     repos = []
     page = 1
+
     while True:
         path = (
-            f"/user/repos?type=owner&visibility=public&per_page=100&page={page}"
-            "&sort=updated"
+            f"/users/{OWNER}/repos?type=owner"
+            f"&per_page=100&page={page}&sort=updated"
         )
+
         batch = api_get(path)
+
         repos.extend(
             repo for repo in batch
-            if repo.get("owner", {}).get("login", "").lower() == OWNER.lower()
+            if repo.get("owner", {}).get("login", "").lower()
+            == OWNER.lower()
+            and repo.get("visibility") == "public"
             and not repo.get("fork", False)
         )
+
         if len(batch) < 100:
             break
+
         page += 1
+
     return repos
 
 
