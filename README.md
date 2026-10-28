@@ -17,7 +17,6 @@ Welcome to my GitHub profile! I build software projects and practical hardware/s
 | [cpp-practice](https://github.com/Parthbiswas9266/cpp-practice) | 5 | 5 |
 | [embedded-firmware-practice](https://github.com/Parthbiswas9266/embedded-firmware-practice) | 13 | 12 |
 | [Momentary-Pulse-Relay-Controller](https://github.com/Parthbiswas9266/Momentary-Pulse-Relay-Controller) | 212 | 89 |
-| [Parthbiswas9266](https://github.com/Parthbiswas9266/Parthbiswas9266) | 0 | 0 |
 | [pocket-tasks](https://github.com/Parthbiswas9266/pocket-tasks) | 96 | 45 |
 | [rock-paper-scissors-game](https://github.com/Parthbiswas9266/rock-paper-scissors-game) | 177 | 78 |
 
@@ -30,4 +29,3 @@ _Unique-cloner counts are summed across repositories. The same person may appear
 
 - [Momentary Pulse Relay Controller](https://github.com/Parthbiswas9266/Momentary-Pulse-Relay-Controller)
 - [Rock Paper Scissors Game](https://github.com/Parthbiswas9266/rock-paper-scissors-game)
-- 
