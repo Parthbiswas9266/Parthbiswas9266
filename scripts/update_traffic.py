@@ -75,69 +75,75 @@ def fmt(n):
 def main():
     repos = get_owned_public_repos()
     rows = []
-    totals = {"clones": 0, "clone_uniques": 0, "views": 0, "view_uniques": 0}
+    total_clones = 0
+    total_unique_cloners = 0
     unavailable = 0
 
     for repo in sorted(repos, key=lambda r: r["name"].lower()):
         name = repo["name"]
         clone_data = traffic(repo["full_name"], "clones")
-        view_data = traffic(repo["full_name"], "views")
-        if clone_data.get("unavailable") or view_data.get("unavailable"):
+
+        if clone_data.get("unavailable"):
             unavailable += 1
+
         clones = clone_data.get("count", 0)
-        clone_uniques = clone_data.get("uniques", 0)
-        views = view_data.get("count", 0)
-        view_uniques = view_data.get("uniques", 0)
-        totals["clones"] += clones
-        totals["clone_uniques"] += clone_uniques
-        totals["views"] += views
-        totals["view_uniques"] += view_uniques
-        rows.append((name, repo["html_url"], clones, clone_uniques, views, view_uniques))
+        unique_cloners = clone_data.get("uniques", 0)
+
+        total_clones += clones
+        total_unique_cloners += unique_cloners
+
+        rows.append((
+            name, repo["html_url"], clones, unique_cloners
+        ))
 
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d UTC")
+
     lines = [
         f"**Last updated:** {today}  ",
         "**Window:** rolling 14 days  ",
         "",
-        "| Public repository | Clone events | Unique cloners | Views | Unique visitors |",
-        "|---|---:|---:|---:|---:|",
+        "| Public repository | Clone events | Unique cloners |",
+        "|---|---:|---:|",
     ]
-    for name, url, clones, clone_uniques, views, view_uniques in rows:
+
+    for name, url, clones, unique_cloners in rows:
         lines.append(
-            f"| [{name}]({url}) | {fmt(clones)} | {fmt(clone_uniques)} | "
-            f"{fmt(views)} | {fmt(view_uniques)} |"
+            f"| [{name}]({url}) | {clones:,} | {unique_cloners:,} |"
         )
+
     lines.extend([
         "",
-        f"**Totals:** {fmt(totals['clones'])} clone events · "
-        f"{fmt(totals['clone_uniques'])} summed unique cloners · "
-        f"{fmt(totals['views'])} views · "
-        f"{fmt(totals['view_uniques'])} summed unique visitors.",
+        f"**Totals:** {total_clones:,} clone events · "
+        f"{total_unique_cloners:,} summed unique cloners.",
         "",
-        "_Unique counts are added across repositories. The same person may appear in more than one repository's count, so these totals are not profile-wide unique people._",
+        "_Unique-cloner counts are summed across repositories. "
+        "The same person may appear in multiple repositories' counts._",
     ])
+
     if unavailable:
         lines.extend([
             "",
-            f"_Note: traffic data was unavailable for {unavailable} repository/repositories; those entries may show zero and should not be interpreted as confirmed zero traffic._",
+            f"_Traffic data was unavailable for {unavailable} "
+            "repository/repositories. Treat their zero values as unknown._",
         ])
+
     section = "\n".join(lines)
 
-    readme_path = "README.md"
-    with open(readme_path, "r", encoding="utf-8") as f:
+    with open("README.md", "r", encoding="utf-8") as f:
         readme = f.read()
 
     if START not in readme or END not in readme:
-        raise SystemExit(
-            "README.md is missing the dashboard markers. Keep both "
-            f"{START} and {END} in README.md."
-        )
+        raise SystemExit("README.md is missing the dashboard markers.")
+
     before, remainder = readme.split(START, 1)
     _, after = remainder.split(END, 1)
+
     updated = before + START + "\n" + section + "\n" + END + after
-    with open(readme_path, "w", encoding="utf-8") as f:
+
+    with open("README.md", "w", encoding="utf-8") as f:
         f.write(updated)
-    print(f"Updated traffic dashboard for {len(rows)} owned public repositories.")
+
+    print(f"Updated dashboard for {len(rows)} public repositories.")
 
 
 if __name__ == "__main__":
