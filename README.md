@@ -8,21 +8,21 @@ Welcome to my GitHub profile! I build software projects and practical hardware/s
 > Unique counts are summed across repositories and are **not** unique people across the whole profile.
 
 <!-- TRAFFIC-DASHBOARD:START -->
-**Last updated:** 2026-11-01 UTC  
+**Last updated:** 2026-11-02 UTC  
 **Window:** rolling 14 days  
 
 | Public repository | Clone events | Unique cloners |
 |---|---:|---:|
-| [circuithub-html](https://github.com/Parthbiswas9266/circuithub-html) | 31 | 21 |
-| [cpp-practice](https://github.com/Parthbiswas9266/cpp-practice) | 6 | 6 |
+| [circuithub-html](https://github.com/Parthbiswas9266/circuithub-html) | 30 | 20 |
+| [cpp-practice](https://github.com/Parthbiswas9266/cpp-practice) | 4 | 4 |
 | [embedded-firmware-practice](https://github.com/Parthbiswas9266/embedded-firmware-practice) | 5 | 5 |
-| [Momentary-Pulse-Relay-Controller](https://github.com/Parthbiswas9266/Momentary-Pulse-Relay-Controller) | 188 | 82 |
-| [NetCore-RP2040](https://github.com/Parthbiswas9266/NetCore-RP2040) | 60 | 24 |
-| [Parthbiswas9266](https://github.com/Parthbiswas9266/Parthbiswas9266) | 195 | 82 |
-| [pocket-tasks](https://github.com/Parthbiswas9266/pocket-tasks) | 99 | 48 |
-| [rock-paper-scissors-game](https://github.com/Parthbiswas9266/rock-paper-scissors-game) | 197 | 87 |
+| [Momentary-Pulse-Relay-Controller](https://github.com/Parthbiswas9266/Momentary-Pulse-Relay-Controller) | 169 | 73 |
+| [NetCore-RP2040](https://github.com/Parthbiswas9266/NetCore-RP2040) | 62 | 26 |
+| [Parthbiswas9266](https://github.com/Parthbiswas9266/Parthbiswas9266) | 225 | 94 |
+| [pocket-tasks](https://github.com/Parthbiswas9266/pocket-tasks) | 100 | 49 |
+| [rock-paper-scissors-game](https://github.com/Parthbiswas9266/rock-paper-scissors-game) | 198 | 88 |
 
-**Totals:** 781 clone events · 355 summed unique cloners.
+**Totals:** 793 clone events · 359 summed unique cloners.
 
 _Unique-cloner counts are summed across repositories. The same person may appear in multiple repositories' counts._
 <!-- TRAFFIC-DASHBOARD:END -->
