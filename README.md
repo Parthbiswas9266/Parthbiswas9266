@@ -8,7 +8,7 @@ Welcome to my GitHub profile! I build software projects and practical hardware/s
 > Unique counts are summed across repositories and are **not** unique people across the whole profile.
 
 <!-- TRAFFIC-DASHBOARD:START -->
-**Last updated:** 2026-11-05 UTC  
+**Last updated:** 2026-11-06 UTC  
 **Window:** rolling 14 days  
 
 | Public repository | Clone events | Unique cloners |
@@ -17,12 +17,12 @@ Welcome to my GitHub profile! I build software projects and practical hardware/s
 | [cpp-practice](https://github.com/Parthbiswas9266/cpp-practice) | 5 | 4 |
 | [embedded-firmware-practice](https://github.com/Parthbiswas9266/embedded-firmware-practice) | 5 | 5 |
 | [Momentary-Pulse-Relay-Controller](https://github.com/Parthbiswas9266/Momentary-Pulse-Relay-Controller) | 11 | 10 |
-| [NetCore-RP2040](https://github.com/Parthbiswas9266/NetCore-RP2040) | 163 | 80 |
-| [Parthbiswas9266](https://github.com/Parthbiswas9266/Parthbiswas9266) | 247 | 104 |
+| [NetCore-RP2040](https://github.com/Parthbiswas9266/NetCore-RP2040) | 173 | 86 |
+| [Parthbiswas9266](https://github.com/Parthbiswas9266/Parthbiswas9266) | 264 | 107 |
 | [pocket-tasks](https://github.com/Parthbiswas9266/pocket-tasks) | 103 | 52 |
-| [rock-paper-scissors-game](https://github.com/Parthbiswas9266/rock-paper-scissors-game) | 200 | 90 |
+| [rock-paper-scissors-game](https://github.com/Parthbiswas9266/rock-paper-scissors-game) | 117 | 58 |
 
-**Totals:** 763 clone events · 364 summed unique cloners.
+**Totals:** 707 clone events · 341 summed unique cloners.
 
 _Unique-cloner counts are summed across repositories. The same person may appear in multiple repositories' counts._
 <!-- TRAFFIC-DASHBOARD:END -->
